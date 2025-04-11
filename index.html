@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Paper Chatbot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-border">
+    <button id="themeButton" class="theme-toggle">🌙 Toggle Theme</button>
+
+    <div class="container">
+      <h1>📚 Research Paper Assistant</h1>
+      <p>Upload a PDF and ask a question based on its content.</p>
+
+      <form id="pdfForm" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept="application/pdf" required />
+        <button type="submit">Upload PDF</button>
+      </form>
+
+      <form id="questionForm">
+        <input type="text" id="question" placeholder="Ask your question..." required />
+        <button type="submit">Get Answer</button>
+      </form>
+
+      <div id="responseBox">Bot's answer will appear here...</div>
+    </div>
+
+    <footer>
+      <p>Created by - <strong>RIDHIMA MAHAJAN</strong></p>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeButton = document.getElementById('themeButton');
+      themeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
+      });
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>

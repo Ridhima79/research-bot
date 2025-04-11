@@ -1,0 +1,27 @@
+{
+    "name": "research-bot",
+    "version": "1.0.0",
+    "description": "A chatbot that answers questions from uploaded research papers (PDFs)",
+    "main": "server/index.js",
+    "scripts": {
+      "start": "node server/index.js"
+    },
+    "keywords": [
+      "chatbot",
+      "pdf",
+      "openai",
+      "research",
+      "nodejs"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "multer": "^1.4.5-lts.1",
+      "openai": "^4.20.0",
+      "pdf-parse": "^1.1.1"
+    }
+  }
+  
